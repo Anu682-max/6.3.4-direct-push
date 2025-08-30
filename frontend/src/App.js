@@ -4,7 +4,7 @@ import './App.css';
 
 // API URL configuration - pointing to deployed backend (NO trailing slash)
 const API_URL =
-  process.env.REACT_APP_API_URL || 'https://6-3-4-bookstore-4-phi.vercel.app';
+  process.env.REACT_APP_API_URL || '';
 
 console.log('API_URL:', API_URL); // Debug log to see what URL is being used
 
@@ -78,9 +78,10 @@ function App() {
       <header className="header">
         <h1>
           <span className="icon icon-book"></span>
-          Номын дэлгүүр
+         Номын дэлгүүр
+         <span className='version'>v1.0</span>
+         <p>Таны дуртай Номын бүртгэлээ үүсгээрэй</p>
         </h1>
-        <p>Таны дуртай номуудыг удирдаарай</p>
       </header>
 
       {/* Add Book Form */}

@@ -20,7 +20,7 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/api/books`);
-      setBooks(response.data);
+      setBooks(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error('Номын жагсаалтыг авахад алдаа гарлаа:', error);
     } finally {
